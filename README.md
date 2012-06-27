@@ -1,4 +1,4 @@
-DashDoc provides integration of (Dash)[http://itunes.apple.com/us/app/dash-docs-snippets/id458034879?mt=12] into Sublime Text.
+DashDoc provides integration of [Dash](http://itunes.apple.com/us/app/dash-docs-snippets/id458034879?mt=12) into Sublime Text.
 
 ## Usage
 
