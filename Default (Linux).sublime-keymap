@@ -1,0 +1,3 @@
+[
+	{ "keys": ["ctrl+h"], "command": "dash_doc"}
+]
