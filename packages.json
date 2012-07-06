@@ -1,0 +1,20 @@
+{
+    "schema_version": "1.2",
+    "packages": [
+        {
+            "name": "DashDoc",
+            "description": "Open the selected text or text under cursor in Dash documentation browser",
+            "author": "Vladimir Pouzanov (@farcaller)",
+            "homepage": "https://github.com/farcaller/DashDoc",
+            "last_modified": "2012-07-06 14:51:29",
+            "platforms": {
+                "osx": [
+                    {
+                        "version": "1.0.0",
+                        "url": "https://github.com/farcaller/DashDoc/zipball/master"
+                    }
+                ]
+            }
+        }
+    ]
+}
