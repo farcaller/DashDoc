@@ -1,0 +1,13 @@
+[
+    {
+        "caption": "DashDoc: invoke Dash with selected word",
+        "command": "dash_doc"
+    },
+    {
+        "caption": "DashDoc: invoke Dash with selected word (syntax-sensitive)",
+        "command": "dash_doc",
+        "args": {
+            "syntax_sensitive": true
+        }
+    }
+]
