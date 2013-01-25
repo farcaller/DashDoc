@@ -16,14 +16,14 @@
               {
                 "command": "open_file", "args":
                 {
-                  "file": "${packages}/DashDoc-Teggy/DashDoc.sublime-settings"
+                  "file": "${packages}/DashDoc/DashDoc.sublime-settings"
                 },
                 "caption": "Settings - Default"
               },
               {
                 "command": "open_file", "args":
                 {
-                  "file": "${packages}/User/DashDoc-Teggy/DashDoc.sublime-settings"
+                  "file": "${packages}/User/DashDoc/DashDoc.sublime-settings"
                 },
                 "caption": "Settings - User"
               },
@@ -31,7 +31,7 @@
               {
                 "command": "open_file", "args":
                 {
-                  "file": "${packages}/DashDoc-Teggy/Default (OSX).sublime-keymap",
+                  "file": "${packages}/DashDoc/Default (OSX).sublime-keymap",
                   "platform": "OSX"
                 },
                 "caption": "Key Bindings - Default"
@@ -39,7 +39,7 @@
               {
                 "command": "open_file", "args":
                 {
-                  "file": "${packages}/User/DashDoc-Teggy/Default (OSX).sublime-keymap",
+                  "file": "${packages}/User/DashDoc/Default (OSX).sublime-keymap",
                   "platform": "OSX"
                 },
                 "caption": "Key Bindings - User"
