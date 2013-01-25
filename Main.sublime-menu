@@ -23,7 +23,7 @@
               {
                 "command": "open_file", "args":
                 {
-                  "file": "${packages}/User/DashDoc/DashDoc.sublime-settings"
+                  "file": "${packages}/User/DashDoc.sublime-settings"
                 },
                 "caption": "Settings - User"
               },
@@ -39,7 +39,7 @@
               {
                 "command": "open_file", "args":
                 {
-                  "file": "${packages}/User/DashDoc/Default (OSX).sublime-keymap",
+                  "file": "${packages}/User/Default (OSX).sublime-keymap",
                   "platform": "OSX"
                 },
                 "caption": "Key Bindings - User"
