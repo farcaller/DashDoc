@@ -1,3 +1,5 @@
 [
-	{ "keys": ["ctrl+h"], "command": "dash_doc"}
+  { "keys": ["ctrl+h"], "command": "dash_doc"},
+  { "keys": ["ctrl+alt+h"], "command": "dash_doc",
+                            "args": { "syntax_sensitive": "true" } }
 ]

@@ -1,0 +1,53 @@
+[
+  {
+    "id": "preferences",
+    "children":
+    [
+      {
+        "caption": "Package Settings",
+        "mnemomic": "P",
+        "id": "package-settings",
+        "children":
+        [
+          {
+            "caption": "DashDoc",
+            "children":
+            [
+              {
+                "command": "open_file", "args":
+                {
+                  "file": "${packages}/DashDoc/DashDoc.sublime-settings"
+                },
+                "caption": "Settings - Default"
+              },
+              {
+                "command": "open_file", "args":
+                {
+                  "file": "${packages}/User/DashDoc/DashDoc.sublime-settings"
+                },
+                "caption": "Settings - User"
+              },
+              { "caption": "-" },
+              {
+                "command": "open_file", "args":
+                {
+                  "file": "${packages}/DashDoc/Default (OSX).sublime-keymap",
+                  "platform": "OSX"
+                },
+                "caption": "Key Bindings - Default"
+              },
+              {
+                "command": "open_file", "args":
+                {
+                  "file": "${packages}/User/DashDoc/Default (OSX).sublime-keymap",
+                  "platform": "OSX"
+                },
+                "caption": "Key Bindings - User"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
