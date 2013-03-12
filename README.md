@@ -12,9 +12,9 @@ As usual, you will find the associated settings under the *Preferences / Package
 
 DashDoc can be made sensitive to the syntax used in the current view. Dash will then consult the docset that matches the current syntax.  Example: a lookup for `map` in a Haskell buffer will instruct Dash to search in its `haskell` docset, a search for the same word in a Python buffer will consult the `python2` docset instead.  
 
-Enable syntax sensitivity (default `False`):
+Enable syntax sensitivity (default `false`):
 
-    "syntax_sensitive": True
+    "syntax_sensitive": true
 
 If you leave syntax sensitivity disabled, Dash will search all installed docsets.  Syntax sensitivity may then still be used in a one-off fashion: simply look up via `Ctrl-Alt-h`.
 
