@@ -21,14 +21,14 @@ def docset_prefix(view, settings):
 
 
 class DashDocCommand(sublime_plugin.TextCommand):
-    def run(self, edit, syntax_sensitive=False):
+    def run(self, edit, alt=False):
         selection = self.view.sel()[0]
         if len(selection) == 0:
             selection = self.view.word(selection)
         word = self.view.substr(selection)
 
         settings = sublime.load_settings('DashDoc.sublime-settings')
-        if syntax_sensitive or settings.get('syntax_sensitive', False):
+        if alt != settings.get('syntax_sensitive', False):
             docset = docset_prefix(self.view, settings)
         else:
             docset = None
