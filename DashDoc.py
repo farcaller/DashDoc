@@ -10,6 +10,11 @@ def syntax_name(view):
     return syntax
 
 
+def camel_case(word):
+    return ''.join(w.capitalize() if i > 0 else w
+                   for i, w in enumerate(word.split()))
+
+
 def docset_prefix(view, settings):
     syntax_docset_map = settings.get('syntax_docset_map', {})
     syntax = syntax_name(view)
@@ -33,4 +38,4 @@ class DashDocCommand(sublime_plugin.TextCommand):
         else:
             docset = None
 
-        subprocess.call(["open", "dash://%s%s" % (docset or '', word)])
+        subprocess.call(["open", "dash://%s%s" % (docset or '', camel_case(word))])
