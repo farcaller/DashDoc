@@ -2,7 +2,7 @@ DashDoc provides integration of [Dash][1] into Sublime Text.
 
 ## Usage
 
-You can look up the word under the cursor or selected text in Dash using `Ctrl+h`.
+You can look up the word under the cursor or selected text in Dash using `Ctrl+Command+h`.
 
 ## Options
 
