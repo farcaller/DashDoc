@@ -6,11 +6,11 @@
             "description": "Open the selected text or text under cursor in Dash documentation browser",
             "author": "Vladimir Pouzanov (@farcaller)",
             "homepage": "https://github.com/farcaller/DashDoc",
-            "last_modified": "2012-07-06 14:51:29",
+            "last_modified": "2013-04-13 18:39:00",
             "platforms": {
                 "osx": [
                     {
-                        "version": "1.0.0",
+                        "version": "1.2.0",
                         "url": "https://nodeload.github.com/farcaller/DashDoc/zipball/master"
                     }
                 ]
