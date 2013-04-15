@@ -33,7 +33,9 @@ class DashDocCommand(sublime_plugin.TextCommand):
         word = self.view.substr(selection)
 
         settings = sublime.load_settings('DashDoc.sublime-settings')
-        if syntax_sensitive or settings.get('syntax_sensitive', False):
+        invert_syntax_sensitivity = settings.get('syntax_sensitive_as_default', False)
+        syntax_sensitive = syntax_sensitive ^ invert_syntax_sensitivity
+        if syntax_sensitive:
             docset = docset_prefix(self.view, settings)
         else:
             docset = None
