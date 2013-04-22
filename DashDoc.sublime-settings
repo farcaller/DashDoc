@@ -8,6 +8,7 @@
     "Clojure"           : "clojure",
     "CSS"               : "css",
     "Erlang"            : "erlang",
+    "GoSublime"         : "go",
     "Groovy"            : "groovy",
     "Haskell"           : "haskell",
     "HTML"              : "html",
