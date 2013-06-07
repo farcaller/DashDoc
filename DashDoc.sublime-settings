@@ -20,7 +20,7 @@
     "Perl"              : "perl",
     "PHP"               : "php",
     "Python"            : "python2",
-    "Rails"             : "rails",
+    "Ruby on Rails"     : "rails",
     "Ruby"              : "ruby",
     "Scala"             : "scala",
     "Shell-Unix-Generic": "manpages",
