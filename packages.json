@@ -6,7 +6,7 @@
             "description": "Open the selected text or text under cursor in Dash documentation browser",
             "author": "Vladimir Pouzanov (@farcaller)",
             "homepage": "https://github.com/farcaller/DashDoc",
-            "last_modified": "2013-04-22 16:24:00",
+            "last_modified": "2013-06-07 08:30:00",
             "platforms": {
                 "osx": [
                     {
