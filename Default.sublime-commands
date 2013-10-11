@@ -9,5 +9,9 @@
         "args": {
             "syntax_sensitive": true
         }
+    },
+    {
+        "caption": "DashDoc: search any topic",
+        "command": "dash_doc_search"
     }
 ]

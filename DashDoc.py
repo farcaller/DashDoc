@@ -41,3 +41,17 @@ class DashDocCommand(sublime_plugin.TextCommand):
             docset = None
 
         subprocess.call(["open", "dash://%s%s" % (docset or '', camel_case(word))])
+
+
+class DashDocSearchCommand(sublime_plugin.WindowCommand):
+    def run(self):
+        self.window.show_input_panel('Topic?', '', self.on_done, self.on_change, self.on_cancel)
+
+    def on_change(self, name):
+        pass
+
+    def on_cancel(self, name):
+        pass
+
+    def on_done(self, topic):
+        subprocess.call(["open", "dash://" + topic])
