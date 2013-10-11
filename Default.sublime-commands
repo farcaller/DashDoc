@@ -28,5 +28,9 @@
             "flip_syntax_sensitive": true,
             "run_in_background": true
         }
+    },
+    {
+        "caption": "DashDoc: search any topic",
+        "command": "dash_doc_search"
     }
 ]
