@@ -54,7 +54,7 @@ More information on [Dash docsets][2].
 * Original idea and code by [Vladimir Pouzanov][3]
 * Syntax sensitivity added by [Torsten Grust][4]
 
-[1]: http://itunes.apple.com/us/app/dash-docs-snippets/id458034879?mt=12
+[1]: http://kapeli.com/dash
 [2]: http://kapeli.com/docsets/
 [3]: http://farcaller.net/
 [4]: http://db.inf.uni-tuebingen.de/team/grust/
