@@ -2,7 +2,11 @@ import sublime, sublime_plugin
 
 import os
 import subprocess
-import urllib
+
+try:
+    from urllib import quote         # Python 2
+except ImportError:
+    from urllib.parse import quote   # Python 3
 
 
 def syntax_name(view):
@@ -23,7 +27,7 @@ def docset_keys(view, syntax_docset_map):
 class DashDocCommand(sublime_plugin.TextCommand):
     def run(self, edit, flip_syntax_sensitive=False):
         # read global and (project-specific) local settings
-        global_settings = sublime.load_settings(__name__ + '.sublime-settings')
+        global_settings = sublime.load_settings('DashDoc.sublime-settings')
         settings  = self.view.settings()
 
         # syntax sensitivity is the default
@@ -47,5 +51,4 @@ class DashDocCommand(sublime_plugin.TextCommand):
         keys = docset_keys(self.view, syntax_docset_map) if syntax_sensitive else []
 
         subprocess.call(['open',
-                         'dash-plugin://keys=%s&query=%s' %
-                         (','.join(keys), urllib.quote(query))])
+                         'dash-plugin://keys=%s&query=%s' % (','.join(keys), quote(query))])
