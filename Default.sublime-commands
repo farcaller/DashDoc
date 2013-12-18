@@ -4,10 +4,10 @@
         "command": "dash_doc"
     },
     {
-        "caption": "DashDoc: invoke Dash with selected word (syntax-sensitive)",
+        "caption": "DashDoc: invoke Dash with selected word (flip syntax sensitivity)",
         "command": "dash_doc",
         "args": {
-            "syntax_sensitive": true
+            "flip_syntax_sensitive": true
         }
     }
 ]

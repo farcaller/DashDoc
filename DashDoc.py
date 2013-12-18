@@ -1,7 +1,12 @@
-import sublime
-import sublime_plugin
+import sublime, sublime_plugin
+
 import os
 import subprocess
+
+try:
+    from urllib import quote         # Python 2
+except ImportError:
+    from urllib.parse import quote   # Python 3
 
 
 def syntax_name(view):
@@ -10,34 +15,40 @@ def syntax_name(view):
     return syntax
 
 
-def camel_case(word):
-    return ''.join(w.capitalize() if i > 0 else w
-                   for i, w in enumerate(word.split()))
-
-
-def docset_prefix(view, settings):
-    syntax_docset_map = settings.get('syntax_docset_map', {})
+def docset_keys(view, syntax_docset_map):
     syntax = syntax_name(view)
 
-    if syntax in syntax_docset_map:
-        return syntax_docset_map[syntax] + ':'
-
-    return None
+    try:
+        return syntax_docset_map[syntax]
+    except KeyError:
+        return []
 
 
 class DashDocCommand(sublime_plugin.TextCommand):
-    def run(self, edit, syntax_sensitive=False):
+    def run(self, edit, flip_syntax_sensitive=False):
+        # read global and (project-specific) local settings
+        global_settings = sublime.load_settings('DashDoc.sublime-settings')
+        settings  = self.view.settings()
+
+        # syntax sensitivity is the default
+        syntax_sensitive_as_default = \
+            settings.get('syntax_sensitive_as_default',
+                         global_settings.get('syntax_sensitive_as_default', True));
+
+        # assemble docset mapping from global settings and project-specific
+        # local settings (which take precedence)
+        syntax_docset_map = dict(list(global_settings.get('syntax_docset_map', {}).items()) +
+                                 list(       settings.get('syntax_docset_map', {}).items()))
+
+        # query
         selection = self.view.sel()[0]
         if len(selection) == 0:
             selection = self.view.word(selection)
-        word = self.view.substr(selection)
+        query = self.view.substr(selection)
 
-        settings = sublime.load_settings('DashDoc.sublime-settings')
-        invert_syntax_sensitivity = settings.get('syntax_sensitive_as_default', False)
-        syntax_sensitive = syntax_sensitive ^ invert_syntax_sensitivity
-        if syntax_sensitive:
-            docset = docset_prefix(self.view, settings)
-        else:
-            docset = None
+        # keys
+        syntax_sensitive = flip_syntax_sensitive ^ syntax_sensitive_as_default
+        keys = docset_keys(self.view, syntax_docset_map) if syntax_sensitive else []
 
-        subprocess.call(["open", "dash://%s%s" % (docset or '', camel_case(word))])
+        subprocess.call(['open',
+                         'dash-plugin://keys=%s&query=%s' % (','.join(keys), quote(query))])
