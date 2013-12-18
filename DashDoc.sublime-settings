@@ -1,5 +1,5 @@
 {
-  "syntax_sensitive_as_default": false,
+  "syntax_sensitive_as_default": true,
   "syntax_docset_map":
   {
     "ActionScript"      : ["actionscript"],
