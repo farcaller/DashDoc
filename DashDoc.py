@@ -22,10 +22,19 @@ def docset_keys(view, syntax_docset_map):
 
 class DashDocCommand(sublime_plugin.TextCommand):
     def run(self, edit, syntax_sensitive=False):
-        # read settings
-        settings = sublime.load_settings('DashDoc.sublime-settings')
-        syntax_sensitivite_as_default = settings.get('syntax_sensitive_as_default', False)
-        syntax_docset_map = settings.get('syntax_docset_map', {})
+        # read global and (project-specific) local settings
+        global_settings = sublime.load_settings(__name__ + '.sublime-settings')
+        settings  = self.view.settings()
+
+        # syntax sensitivity is the default
+        syntax_sensitive_as_default = \
+            settings.get('syntax_sensitive_as_default',
+                         global_settings.get('syntax_sensitive_as_default', True));
+
+        # assemble docset mapping from global settings and project-specific
+        # local settings (which take precedence)
+        syntax_docset_map = dict(list(global_settings.get('syntax_docset_map', {}).items()) +
+                                 list(       settings.get('syntax_docset_map', {}).items()))
 
         # query
         selection = self.view.sel()[0]
@@ -34,7 +43,7 @@ class DashDocCommand(sublime_plugin.TextCommand):
         query = self.view.substr(selection)
 
         # keys
-        syntax_sensitive = syntax_sensitive ^ syntax_sensitivite_as_default
+        syntax_sensitive = syntax_sensitive ^ syntax_sensitive_as_default
         keys = docset_keys(self.view, syntax_docset_map) if syntax_sensitive else []
 
         subprocess.call(['open',
