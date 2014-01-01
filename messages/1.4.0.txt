@@ -1,0 +1,16 @@
+DashDoc 1.4.0 is a major update (all credit goes @Teggy who made this possible).
+
+This version requires Dash 1.9.3 or newer to work. Also, the default browsing
+mode is syntax sensetive now (you might be interested in updating
+syntax_sensitive_as_default property value if you have overrided it to false
+for some reason).
+
+The Dash proposed syntax mapping is in place, however you can override it on in
+project settings or globally like this:
+
+    "settings": {
+      "syntax_docset_map": {
+        "Objective-C": ["iphoneos", "cocos2d"]
+      }
+    }
+
