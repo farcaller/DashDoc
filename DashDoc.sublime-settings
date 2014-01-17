@@ -3,7 +3,6 @@
   "syntax_docset_map":
   {
     "ActionScript"          : ["actionscript"],
-    "Appcelerator"          : ["javascript","xml","tss","jmk"]
     "Boo"                   : ["unity3d"],
     "C"                     : ["c", "glib", "gl2", "gl3", "gl4", "manpages"],
     "C99"                   : ["c", "glib", "gl2", "gl3", "gl4", "manpages"],
@@ -25,7 +24,7 @@
     "HTML"                  : ["html", "svg", "css", "bootstrap", "foundation", "javascript", "jquery", "jqueryui", "jquerym", "angularjs", "backbone", "marionette", "meteor", "moo", "prototype", "ember", "lodash", "underscore", "sencha", "extjs", "knockout", "zepto", "cordova", "phonegap", "yui"],
     "Jade"                  : ["jade"],
     "Java"                  : ["java", "javafx", "grails", "groovy", "playjava", "spring", "cvj", "processing"],
-    "JavaScript"            : ["javascript", "jquery", "jqueryui", "jquerym", "backbone", "marionette", "meteor", "sproutcore", "moo", "prototype", "bootstrap", "foundation", "lodash", "underscore", "ember", "sencha", "extjs", "knockout", "zepto", "yui", "d3", "svg", "dojo", "coffee", "nodejs", "express", "chai", "html", "css", "cordova", "phonegap", "unity3d"],
+    "JavaScript"            : ["javascript", "jquery", "jqueryui", "jquerym", "backbone", "marionette", "meteor", "sproutcore", "moo", "prototype", "bootstrap", "foundation", "lodash", "underscore", "ember", "sencha", "extjs", "knockout", "zepto", "yui", "d3", "svg", "dojo", "coffee", "nodejs", "express", "chai", "html", "css", "cordova", "phonegap", "unity3d, "titanium""],
     "Less"                  : ["less"],
     "Lisp"                  : ["lisp"],
     "Lua"                   : ["lua", "corona"],
@@ -52,6 +51,8 @@
     "Shell-Unix-Generic"    : ["bash", "manpages"],
     "SQL"                   : ["mysql", "sqlite", "psql"],
     "TCL"                   : ["tcl"],
-    "YAML"                  : ["yaml"]
+    "TSS"                   : ["titanium"],
+    "YAML"                  : ["yaml"],
+    "XML"                   : ["xml","titanium"]
   }
 }
