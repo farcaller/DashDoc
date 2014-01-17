@@ -2,7 +2,7 @@
   "syntax_sensitive_as_default": true,
   "syntax_docset_map":
   {
-    "ActionScript"          : ["javascript"],
+    "ActionScript"          : ["actionscript"],
     "Appcelerator"          : ["javascript","xml","tss","jmk"]
     "Boo"                   : ["unity3d"],
     "C"                     : ["c", "glib", "gl2", "gl3", "gl4", "manpages"],
