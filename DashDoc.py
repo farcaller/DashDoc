@@ -50,5 +50,5 @@ class DashDocCommand(sublime_plugin.TextCommand):
         syntax_sensitive = flip_syntax_sensitive ^ syntax_sensitive_as_default
         keys = docset_keys(self.view, syntax_docset_map) if syntax_sensitive else []
 
-        subprocess.call(['open',
+        subprocess.call(['/usr/bin/open',
                          'dash-plugin://keys=%s&query=%s' % (','.join(keys), quote(query))])
