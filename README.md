@@ -5,7 +5,10 @@ DashDoc provides integration of [Dash][1] into Sublime Text.
 You can look up the word under the cursor or selected text in Dash using `ctrl+h`.
 
 ## Installation
-Use [Sublime Package Control][6].
+
+1. Install the [Sublime Package Control][6] package.
+2. Use Package Control to install this package (DashDoc)
+
 
 ## Options
 
@@ -97,5 +100,5 @@ More information on [Dash docsets][2].
 [3]: http://kapeli.com/dash_plugins
 [4]: http://farcaller.net/
 [5]: http://db.inf.uni-tuebingen.de/team/grust/
-[6]: http://wbond.net/sublime_packages/package_control
+[6]: https://packagecontrol.io/installation
 
