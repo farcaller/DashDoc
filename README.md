@@ -1,5 +1,9 @@
 DashDoc provides integration of [Dash][1] into Sublime Text.
 
+## If the package is not available in the install list
+
+You need to be on OS X to use DashDoc. You might have installed it already. If nothing helps, please check package control [troubleshooting](https://packagecontrol.io/docs/troubleshooting) page or fill a bug against [package control](https://packagecontrol.io/docs/issues).
+
 ## Usage
 
 You can look up the word under the cursor or selected text in Dash using `ctrl+h`.
