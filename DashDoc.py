@@ -2,6 +2,7 @@ import sublime, sublime_plugin
 
 import os
 import subprocess
+import platform
 
 try:
     from urllib import quote         # Python 2
@@ -50,5 +51,10 @@ class DashDocCommand(sublime_plugin.TextCommand):
         syntax_sensitive = flip_syntax_sensitive ^ syntax_sensitive_as_default
         keys = docset_keys(self.view, syntax_docset_map) if syntax_sensitive else []
 
-        subprocess.call(['/usr/bin/open', '-g',
+        if platform.system() == 'Windows':
+            subprocess.call(['start',
+                         'dash-plugin://keys=%s&query=%s' % (','.join(keys), quote(query))],
+                         shell=True)
+        else:
+            subprocess.call(['/usr/bin/open', '-g',
                          'dash-plugin://keys=%s&query=%s' % (','.join(keys), quote(query))])
