@@ -52,9 +52,13 @@ class DashDocCommand(sublime_plugin.TextCommand):
         keys = docset_keys(self.view, syntax_docset_map) if syntax_sensitive else []
 
         if platform.system() == 'Windows':
-            subprocess.call(['start',
-                         'dash-plugin://keys=%s&query=%s' % (','.join(keys), quote(query))],
-                         shell=True)
+            # sending keys=<nothing> confuses some Windows doc viewers
+            if keys:
+                # ampersand must be escaped and ^ is the Windows shell escape char
+                url = 'dash-plugin://keys=%s^&query=%s' % (','.join(keys), quote(query))
+            else:
+                url = 'dash-plugin://query=%s' % quote(query)
+            subprocess.call(['start', url], shell=True)
         else:
             subprocess.call(['/usr/bin/open', '-g',
                          'dash-plugin://keys=%s&query=%s' % (','.join(keys), quote(query))])
