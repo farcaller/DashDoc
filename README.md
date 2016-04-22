@@ -1,8 +1,8 @@
-DashDoc provides integration of [Dash][1] into Sublime Text.
+DashDoc provides integration of [Dash][1] (on OS X) and [Zeal][7] or [Velocity][8] (on Windows) into Sublime Text.
 
 ## If the package is not available in the install list
 
-You need to be on OS X to use DashDoc. You might have installed it already. If nothing helps, please check package control [troubleshooting](https://packagecontrol.io/docs/troubleshooting) page or fill a bug against [package control](https://packagecontrol.io/docs/issues).
+You need to be on OS X or Windows to use DashDoc. You might have installed it already. If nothing helps, please check package control [troubleshooting](https://packagecontrol.io/docs/troubleshooting) page or fill a bug against [package control](https://packagecontrol.io/docs/issues).
 
 ## Usage
 
@@ -105,4 +105,5 @@ More information on [Dash docsets][2].
 [4]: http://farcaller.net/
 [5]: http://db.inf.uni-tuebingen.de/team/grust/
 [6]: https://packagecontrol.io/installation
-
+[7]: https://zealdocs.org/
+[8]: https://velocity.silverlakesoftware.com/
