@@ -1,0 +1,3 @@
+This version adds support for Windows, when using Dash-compatible viewers. It
+has been tested against Zeal (https://zealdocs.org/) and Velocity
+(https://velocity.silverlakesoftware.com/).
