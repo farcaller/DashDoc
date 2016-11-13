@@ -1,0 +1,20 @@
+# Warning, breaking change!
+
+After a long discussion in https://github.com/farcaller/DashDoc/issues/29
+I came to decision to change the default hotkeys (ctrl+h and ctrl+alt+h).
+Given there are no good alternatives, this version REMOVES the default hotkey,
+leaving the choice to the user.
+
+You can always use the command palette too.
+
+To set up the hotkey for dash open the Preferences > Key Bindings from the menu
+and add a new entry that looks like this:
+
+    { "keys": ["YOUR HOTKEY"], "command": "dash_doc"}
+
+for the default mode
+
+    { "keys": ["YOUR HOTKEY"], "command": "dash_doc",
+                               "args": { "flip_syntax_sensitive": true } }
+
+for the flipped case sensitive mode.
