@@ -63,6 +63,7 @@ Mappings that are not overridden this way default to what is found in the `DashD
       "Jade"                  : ["jade"],
       "Java"                  : ["java", "javafx", "grails", "groovy", "playjava", "spring", "cvj", "processing"],
       "JavaScript"            : ["javascript", "jquery", "jqueryui", "jquerym", "backbone", "marionette", "meteor", "sproutcore", "moo", "prototype", "bootstrap", "foundation", "lodash", "underscore", "ember", "sencha", "extjs", "knockout", "zepto", "yui", "d3", "svg", "dojo", "coffee", "nodejs", "express", "chai", "html", "css", "cordova", "phonegap", "unity3d"],
+      "Kotlin"                : ["kotlin"],  
       "Less"                  : ["less"],
       "Lisp"                  : ["lisp"],
       "Lua"                   : ["lua", "corona"],
