@@ -1,13 +1,32 @@
 [
     {
         "caption": "DashDoc: invoke Dash with selected word",
-        "command": "dash_doc"
+        "command": "dash_doc",
+        "args": {
+            "flip_syntax_sensitive": false
+        }
     },
     {
         "caption": "DashDoc: invoke Dash with selected word (flip syntax sensitivity)",
         "command": "dash_doc",
         "args": {
             "flip_syntax_sensitive": true
+        }
+    },
+    {
+        "caption": "DashDoc: invoke Dash in background with selected word",
+        "command": "dash_doc",
+        "args": {
+            "flip_syntax_sensitive": false,
+            "run_in_background": true
+        }
+    },
+    {
+        "caption": "DashDoc: invoke Dash in background with selected word (flip syntax sensitivity)",
+        "command": "dash_doc",
+        "args": {
+            "flip_syntax_sensitive": true,
+            "run_in_background": true
         }
     }
 ]
