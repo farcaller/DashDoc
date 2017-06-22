@@ -26,7 +26,7 @@ def docset_keys(view, syntax_docset_map):
 
 
 class DashDocCommand(sublime_plugin.TextCommand):
-    def run(self, edit, flip_syntax_sensitive=False):
+    def run(self, edit, flip_syntax_sensitive=False, run_in_background=False):
         # read global and (project-specific) local settings
         global_settings = sublime.load_settings('DashDoc.sublime-settings')
         settings  = self.view.settings()
@@ -51,14 +51,17 @@ class DashDocCommand(sublime_plugin.TextCommand):
         syntax_sensitive = flip_syntax_sensitive ^ syntax_sensitive_as_default
         keys = docset_keys(self.view, syntax_docset_map) if syntax_sensitive else []
 
+        # background
+        background_string = '&prevent_activation=true' if run_in_background else ''
+
         if platform.system() == 'Windows':
             # sending keys=<nothing> confuses some Windows doc viewers
             if keys:
                 # ampersand must be escaped and ^ is the Windows shell escape char
-                url = 'dash-plugin://keys=%s^&query=%s' % (','.join(keys), quote(query))
+                url = 'dash-plugin://keys=%s^&query=%s%s' % (','.join(keys), quote(query), background_string)
             else:
-                url = 'dash-plugin://query=%s' % quote(query)
+                url = 'dash-plugin://query=%s%s' % (quote(query), background_string)
             subprocess.call(['start', url], shell=True)
         else:
             subprocess.call(['/usr/bin/open', '-g',
-                         'dash-plugin://keys=%s&query=%s' % (','.join(keys), quote(query))])
+                         'dash-plugin://keys=%s&query=%s%s' % (','.join(keys), quote(query), background_string)])
