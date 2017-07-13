@@ -62,6 +62,9 @@ class DashDocCommand(sublime_plugin.TextCommand):
             else:
                 url = 'dash-plugin://query=%s%s' % (quote(query), background_string)
             subprocess.call(['start', url], shell=True)
+        elif platform.system() == 'Linux':
+            subprocess.call(['/usr/bin/xdg-open',
+                         'dash-plugin://keys=%s&query=%s%s' % (','.join(keys), quote(query), background_string)])
         else:
             subprocess.call(['/usr/bin/open', '-g',
                          'dash-plugin://keys=%s&query=%s%s' % (','.join(keys), quote(query), background_string)])

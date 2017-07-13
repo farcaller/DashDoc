@@ -1,8 +1,8 @@
-DashDoc provides integration of [Dash][1] (on OS X) and [Zeal][7] or [Velocity][8] (on Windows) into Sublime Text.
+DashDoc provides integration of [Dash][1] (on OS X), [Zeal][7] (on Linux) and [Zeal][7] or [Velocity][8] (on Windows) into Sublime Text.
 
 ## If the package is not available in the install list
 
-You need to be on OS X or Windows to use DashDoc. You might have installed it already. If nothing helps, please check package control [troubleshooting](https://packagecontrol.io/docs/troubleshooting) page or fill a bug against [package control](https://packagecontrol.io/docs/issues).
+You need to be on OS X, Windows or Linux to use DashDoc. You might have installed it already. If nothing helps, please check package control [troubleshooting](https://packagecontrol.io/docs/troubleshooting) page or fill a bug against [package control](https://packagecontrol.io/docs/issues).
 
 ## Usage
 
@@ -12,6 +12,10 @@ You can look up the word under the cursor or selected text in Dash using `ctrl+h
 
 1. Install the [Sublime Package Control][6] package.
 2. Use Package Control to install this package (DashDoc)
+
+### Dependencies
+
+[xdg-utils][9] on Linux.
 
 
 ## Options
@@ -107,3 +111,4 @@ More information on [Dash docsets][2].
 [6]: https://packagecontrol.io/installation
 [7]: https://zealdocs.org/
 [8]: https://velocity.silverlakesoftware.com/
+[9]: https://www.freedesktop.org/wiki/Software/xdg-utils/
