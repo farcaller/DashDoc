@@ -8,7 +8,7 @@
             "releases": [
                 {
                     "sublime_text": "*",
-                    "platforms": ["osx", "windows"],
+                    "platforms": ["osx", "windows", "linux"],
                     "details": "https://github.com/farcaller/DashDoc/tags"
                 }
             ]
