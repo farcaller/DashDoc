@@ -57,6 +57,6 @@
     "TSS"                   : ["titanium"],
     "TypeScript"            : ["typescript", "javascript", "react", "nodejs", "jquery", "jqueryui", "jquerym", "angularjs", "backbone", "marionette", "meteor", "sproutcore", "moo", "prototype", "bootstrap", "foundation", "lodash", "underscore", "ember", "sencha", "extjs", "knockout", "zepto", "yui", "d3", "svg", "dojo", "express", "mongoose", "moment", "require", "awsjs", "jasmine", "sinon", "grunt", "chai", "html", "css", "cordova", "phonegap", "unity3d", "titanium"],
     "YAML"                  : ["yaml"],
-    "XML"                   : ["xml","titanium"]
+    "XML"                   : ["xml", "titanium"]
   }
 }
