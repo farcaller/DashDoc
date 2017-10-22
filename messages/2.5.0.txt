@@ -1,0 +1,5 @@
+This release of DashDoc changes how URLs are handled in linux and might be a
+breaking change. If you use this plugin, run linux, and DashDoc suddenly stopped
+working, please report back to this ticket:
+
+https://github.com/farcaller/DashDoc/issues/54
