@@ -67,4 +67,4 @@ class DashDocCommand(sublime_plugin.TextCommand):
                          'dash-plugin:keys=%s&query=%s%s' % (','.join(keys), quote(query), background_string)])
         else:
             subprocess.call(['/usr/bin/open', '-g',
-                         'dash-plugin:keys=%s&query=%s%s' % (','.join(keys), quote(query), background_string)])
+                         'dash-plugin://keys=%s&query=%s%s' % (','.join(keys), quote(query), background_string)])
