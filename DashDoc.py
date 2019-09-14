@@ -80,4 +80,4 @@ class DashDocSearchCommand(sublime_plugin.WindowCommand):
         pass
 
     def on_done(self, topic):
-        subprocess.call(["open", "dash://" + topic])
+        subprocess.call(["open", "dash-plugin://" + quote(topic)])
