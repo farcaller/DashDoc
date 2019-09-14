@@ -38,6 +38,10 @@ for the flipped case sensitive mode.
 
 As usual, you will find the associated settings under the *Preferences / Package Settings / DashDoc* menu.  Personal settings should be made in *Settings - User*.
 
+### Search any topic
+
+DashDoc also includes a command to search any topic right from Sublime's command palette.
+
 ### Syntax sensitivity
 
 By default, DashDoc is sensitive to the syntax used in the current view. Dash will then consult the docset that matches the current syntax.  Example: a lookup for `map` in a Haskell buffer will instruct Dash to search in its `haskell` docset, a search for the same word in a Python buffer will consult the `python` docset instead.
