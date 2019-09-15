@@ -68,3 +68,16 @@ class DashDocCommand(sublime_plugin.TextCommand):
         else:
             subprocess.call(['/usr/bin/open', '-g',
                          'dash-plugin://keys=%s&query=%s%s' % (','.join(keys), quote(query), background_string)])
+
+class DashDocSearchCommand(sublime_plugin.WindowCommand):
+    def run(self):
+        self.window.show_input_panel('Topic?', '', self.on_done, self.on_change, self.on_cancel)
+
+    def on_change(self, name):
+        pass
+
+    def on_cancel(self, name):
+        pass
+
+    def on_done(self, topic):
+        subprocess.call(["open", "dash-plugin://" + quote(topic)])
