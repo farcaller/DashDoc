@@ -101,4 +101,4 @@ class DashDocSearchCommand(sublime_plugin.WindowCommand):
         pass
 
     def on_done(self, topic):
-        open_dash(topic, False, False)
+        open_dash(topic, [], False)
