@@ -25,7 +25,7 @@ def docset_keys(view, syntax_docset_map):
         return []
 
 
-def open_dash(query, keys, run_in_background)
+def open_dash(query, keys, run_in_background):
     # background
     background_string = '&prevent_activation=true' if run_in_background else ''
 
