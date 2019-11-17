@@ -20,12 +20,12 @@ DashDoc no longer comes with a default hotkey.
 To set up the hotkey for dash open the Preferences > Key Bindings from the menu
 and add a new entry that looks like this:
 
-    { "keys": ["YOUR HOTKEY"], "command": "dash_doc"}
+    [{ "keys": ["YOUR HOTKEY"], "command": "dash_doc"}]
 
 for the default mode
 
-    { "keys": ["YOUR HOTKEY"], "command": "dash_doc",
-                               "args": { "flip_syntax_sensitive": true } }
+    [{ "keys": ["YOUR HOTKEY"], "command": "dash_doc",
+                               "args": { "flip_syntax_sensitive": true } }]
 
 for the flipped case sensitive mode.
 
